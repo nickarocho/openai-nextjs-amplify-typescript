@@ -1,10 +1,9 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import { GiSittingDog } from "react-icons/gi";
 
-const inter = Inter({ subsets: ["latin"] });
+import RadixSlider from "../components/Slider/Slider";
 
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
@@ -59,6 +58,9 @@ export default function Home() {
           />
           <input type="submit" value="Generate names" />
         </form>
+
+        <RadixSlider />
+
         <div className={styles.result}>{result}</div>
       </main>
     </>
